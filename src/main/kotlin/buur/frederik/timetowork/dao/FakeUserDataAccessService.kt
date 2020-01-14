@@ -20,15 +20,24 @@ class FakeUserDataAccessService : UserDao {
 
     override fun selectUserById(id: UUID): User? {
         return DB.singleOrNull { it.id == id }
-//        return DB.stream().filter { user -> user.id.equals(id) }
-//                .findFirst()
     }
 
     override fun deleteUserById(id: UUID): Int {
+        DB.removeIf { user ->
+            user.id?.equals(id) ?: false
+        }
         return 1
     }
 
     override fun updateUserById(id: UUID, user: User): Int {
-        return 1
+        return selectUserById(id)?.let {
+            val index = DB.indexOf(it)
+            if (index >= 0) {
+                DB[index] = User(id, user.name)
+                1
+            } else {
+                0
+            }
+        } ?: 0
     }
 }
