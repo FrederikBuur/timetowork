@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>buur.frederik</groupId>
 	<artifactId>timetowork</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>timetowork</name>
 	<description>My system</description>
 
