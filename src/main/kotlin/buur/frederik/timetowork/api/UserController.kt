@@ -18,7 +18,8 @@ class UserController @Autowired constructor(
     fun addUser(@Valid @NonNull @RequestBody user: User) = userService.addUser(user)
 
     @GetMapping
-    fun getAllUsers() = userService.getAllUsers()
+//    fun getAllUsers() = userService.getAllUsers()
+    fun getAllUsers() = "Test is working cmon"
 
     @GetMapping(path = ["{id}"])
     fun getUser(@PathVariable("id") id: UUID) = userService.getUserById(id)
