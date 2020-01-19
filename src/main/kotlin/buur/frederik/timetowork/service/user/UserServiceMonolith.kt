@@ -1,8 +1,7 @@
 package buur.frederik.timetowork.service.user
 
-import buur.frederik.timetowork.dao.user.UserDao
+import buur.frederik.timetowork.dao.user.IUserDao
 import buur.frederik.timetowork.model.User
-import buur.frederik.timetowork.service.user.IUserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Service
@@ -11,8 +10,7 @@ import java.util.*
 @Service
 @Qualifier("monolith")
 class UserServiceMonolith @Autowired constructor(
-        @Qualifier("fakeDao") private val userDao: UserDao
-//        @Qualifier("postgres") private val userDao: UserDao
+        @Qualifier("fakeDao") private val userDao: IUserDao
 ) : IUserService {
 
     override fun createUser(user: User) {

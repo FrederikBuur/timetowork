@@ -1,4 +1,4 @@
-package buur.frederik.timetowork.service
+package buur.frederik.timetowork.service.user
 
 import buur.frederik.timetowork.model.User
 import java.util.*

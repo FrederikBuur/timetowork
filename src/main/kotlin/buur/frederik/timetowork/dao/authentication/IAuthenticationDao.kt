@@ -1,2 +1,5 @@
-package buur.frederik.timetowork.dao.authentication 
+package buur.frederik.timetowork.dao.authentication
 
+interface IAuthenticationDao {
+
+}

@@ -3,7 +3,7 @@ package buur.frederik.timetowork.dao.user
 import buur.frederik.timetowork.model.User
 import java.util.*
 
-interface UserDao {
+interface IUserDao {
 
     fun insertUser(id: UUID? = null, user: User): Int
 

@@ -1,8 +1,9 @@
 package buur.frederik.timetowork.api
 
 import buur.frederik.timetowork.model.User
-import buur.frederik.timetowork.service.UserService
+import buur.frederik.timetowork.service.user.IUserService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.lang.NonNull
 import org.springframework.web.bind.annotation.*
 import java.util.*
@@ -11,11 +12,11 @@ import javax.validation.Valid
 @RequestMapping("/api/v1/user")
 @RestController
 class UserController @Autowired constructor(
-        val userService: UserService
+        @Qualifier("monolith") val userService: IUserService
 ) {
 
     @PostMapping
-    fun addUser(@Valid @NonNull @RequestBody user: User) = userService.addUser(user)
+    fun createUser(@Valid @NonNull @RequestBody user: User) = userService.createUser(user)
 
     @GetMapping
     fun getAllUsers() = userService.getAllUsers()
