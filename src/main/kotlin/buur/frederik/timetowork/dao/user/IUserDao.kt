@@ -1,4 +1,4 @@
-package buur.frederik.timetowork.dao
+package buur.frederik.timetowork.dao.user
 
 import buur.frederik.timetowork.model.User
 import java.util.*
@@ -9,10 +9,10 @@ interface UserDao {
 
     fun selectAllUsers(): List<User>
 
-    fun selectUserById(id: UUID): User?
+    fun selectUserById(id: UUID): User
 
-    fun deleteUserById(id: UUID): Int
+    fun deleteUserById(id: UUID)
 
-    fun updateUserById(id: UUID, user: User): Int
+    fun updateUserById(id: UUID, user: User)
 
 }
