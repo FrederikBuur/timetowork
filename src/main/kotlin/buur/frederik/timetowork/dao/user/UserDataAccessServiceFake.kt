@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository("fakeDao")
-class FakeUserDataAccessService : IUserDao {
+class UserDataAccessServiceFake : IUserDao {
 
     private val DB = ArrayList<User>()
 
