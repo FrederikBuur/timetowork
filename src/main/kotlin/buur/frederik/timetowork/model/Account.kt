@@ -12,6 +12,8 @@ class Account(
         val username: String,
         @JsonProperty("password")
         @get: NotBlank(message = "password is required")
-        val password: String
+        val password: String,
+        @JsonProperty("userId")
+        val userId: UUID
 ) {
 }

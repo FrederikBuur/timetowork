@@ -10,7 +10,7 @@ import java.util.*
 @Service
 @Qualifier("monolith")
 class UserServiceMonolith @Autowired constructor(
-        @Qualifier("fakeDao") private val userDao: IUserDao
+        @Qualifier("fakeUserDao") private val userDao: IUserDao
 ) : IUserService {
 
     override fun createUser(user: User) {

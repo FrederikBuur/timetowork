@@ -4,7 +4,7 @@ import buur.frederik.timetowork.model.User
 import org.springframework.stereotype.Repository
 import java.util.*
 
-@Repository("fakeDao")
+@Repository("fakeUserDao")
 class UserDataAccessServiceFake : IUserDao {
 
     private val DB = ArrayList<User>()

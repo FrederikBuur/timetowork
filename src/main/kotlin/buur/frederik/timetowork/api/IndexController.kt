@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController
 class IndexController {
 
     @GetMapping
-    fun getIndex() = "Server is running"
+    fun getIndex() = "Server is up and running!"
 
 }
